@@ -7,8 +7,8 @@ import Foundation
 public struct ColorInfo {
     /// The information for a color's name.
     public struct NameInfo {
-        let name: String
-        let hex: String
+        public let name: String
+        public let hex: String
     }
 
     /// The color's original hex string.
