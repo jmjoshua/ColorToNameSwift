@@ -12,15 +12,17 @@ public struct ColorInfo {
     }
 
     /// The color's original hex string.
-    var originalHex: String
+    public var originalHex: String
     /// The color name information for the closest generic color to the original hex.
-    var genericName: NameInfo
+    public var genericName: NameInfo
     /// The color name information for the closest specific color to the original hex.
-    var specificName: NameInfo
+    public var specificName: NameInfo
 }
 
 /// An object that generates color name information based on a hex code.
 public struct ColorClassifier {
+    public init() { }
+
     /// Get generic and specific color information for a given hex code.
     /// - Parameter hex: The hex code for the input color.
     /// - Returns: A `ColorInfo` object containing generic and specific name and hex information for the color.
