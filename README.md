@@ -3,6 +3,20 @@
  A Swift package which helps to map a hex color code to a color name, based on [Zeplin's color palette dataset](https://github.com/zeplin/zeplin-palette).
 This package is a recreation of https://github.com/stanleyfok/color-to-name.
 
+## Installation
+
+Add dependency to your package.
+```
+dependencies: [
+    .package(url: "https://github.com/jmjoshua/ColorToNameSwift", from: "1.0.0"),
+],
+```
+
+Add product to your target.
+```
+.product(name: "ColorToNameSwift", package: "ColorToNameSwift")
+```
+
 ## Usage
 
 ### getNames
