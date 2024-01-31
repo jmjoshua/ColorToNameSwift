@@ -3,7 +3,7 @@
 
 import Foundation
 
-/// The name and hex information for a given color.
+/// The generic and specific name and hex information for a given color.
 public struct ColorInfo {
     /// The information for a color's name.
     public struct NameInfo {
@@ -19,7 +19,11 @@ public struct ColorInfo {
     var specificName: NameInfo
 }
 
+/// An object that generates color name information based on a hex code.
 public struct ColorClassifier {
+    /// Get generic and specific color information for a given hex code.
+    /// - Parameter hex: The hex code for the input color.
+    /// - Returns: A `ColorInfo` object containing generic and specific name and hex information for the color.
     public func getNames(for hex: String) throws -> ColorInfo {
         let specificColorInfo = try getClosestColor(color: hex, dataSet: getDataSet(for: "specific-colors"))
         // Generic colors sourced from: https://www.rapidtables.com/web/color/html-color-codes.html
